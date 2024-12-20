@@ -1,26 +1,12 @@
-const readline = require('readline');
+function openProg() {
+    let racecar = prompt("ENTER RACECAR");
+    let recorder = prompt("ENTER RECORDER");
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+    alert("Original string: " + racecar)
+    alert("Original string: " + recorder)
 
+    const reverse = (racecar) => racecar.split("").reverse().join("");
+    const reverseString = (recorder) => recorder.split("").reverse().join("");
 
-function reverseString(str) {
-    return str.split('').reverse().join('');
-}
-
-function checkPalindrome(word) {
-    let reversed = reverseString(word);
-    console.log(`Original String: ${word}`);
-    console.log(`Reversed String: ${reversed}`);
-    console.log(`Is it a palindrome? ${word === reversed}`);
-}
-
-rl.question("Enter the first word: ", (word1) => {
-    rl.question("Enter the second word: ", (word2) => {
-        checkPalindrome(word1);
-        checkPalindrome(word2);
-        rl.close(); 
-    });
-});
+    alert("Reversed String: " + (reverse(racecar)));
+    alert("Reversed String: " + (reverseString(recorder)))};
